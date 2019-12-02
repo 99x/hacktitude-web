@@ -9,6 +9,12 @@ div .text-white::first-letter {
   margin-top: 3% !important;
 }
 
+@media (max-width: 991px) {
+    .column-margin {
+      margin: 5% 0;
+    }
+}
+
 .nav li a.inner-link {
     color: #e86528;
     font-size: 1.2em;
