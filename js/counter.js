@@ -4,18 +4,20 @@
 (function(factory) {
     "use strict";
     if (typeof define === "function" && define.amd) {
-        define([ "jquery" ], factory);
+        define(["jquery"], factory);
     } else {
         factory(jQuery);
     }
 })(function($) {
     "use strict";
     var PRECISION = 100;
-    var instances = [], matchers = [];
+    var instances = [],
+        matchers = [];
     matchers.push(/^[0-9]*$/.source);
     matchers.push(/([0-9]{1,2}\/){2}[0-9]{4}( [0-9]{1,2}(:[0-9]{2}){2})?/.source);
     matchers.push(/[0-9]{4}([\/\-][0-9]{1,2}){2}( [0-9]{1,2}(:[0-9]{2}){2})?/.source);
     matchers = new RegExp(matchers.join("|"));
+
     function parseDateString(dateString) {
         if (dateString instanceof Date) {
             return dateString;
@@ -42,12 +44,17 @@
         M: "minutes",
         S: "seconds"
     };
+
     function strftime(offsetObject) {
         return function(format) {
             var directives = format.match(/%(-|!)?[A-Z]{1}(:[^;]+;)?/gi);
             if (directives) {
                 for (var i = 0, len = directives.length; i < len; ++i) {
-                    var directive = directives[i].match(/%(-|!)?([a-zA-Z]{1})(:[^;]+;)?/), regexp = new RegExp(directive[0]), modifier = directive[1] || "", plural = directive[3] || "", value = null;
+                    var directive = directives[i].match(/%(-|!)?([a-zA-Z]{1})(:[^;]+;)?/),
+                        regexp = new RegExp(directive[0]),
+                        modifier = directive[1] || "",
+                        plural = directive[3] || "",
+                        value = null;
                     directive = directive[2];
                     if (DIRECTIVE_KEY_MAP.hasOwnProperty(directive)) {
                         value = DIRECTIVE_KEY_MAP[directive];
@@ -70,8 +77,10 @@
             return format;
         };
     }
+
     function pluralize(format, count) {
-        var plural = "s", singular = "";
+        var plural = "s",
+            singular = "";
         if (format) {
             format = format.replace(/(:|;|\s)/gi, "").split(/\,/);
             if (format.length === 1) {
@@ -153,6 +162,9 @@
             };
             if (this.totalSecsLeft === 0) {
                 this.stop();
+                document.getElementById("reg").disabled = false;
+                document.getElementById("reg-2").disabled = false;
+                document.getElementById("reg-2").innerHTML="Register Now!";
                 this.dispatchEvent("finish");
             } else {
                 this.dispatchEvent("update");
@@ -171,7 +183,8 @@
         return this.each(function() {
             var instanceNumber = $(this).data("countdown-instance");
             if (instanceNumber !== undefined) {
-                var instance = instances[instanceNumber], method = argumentsArray[0];
+                var instance = instances[instanceNumber],
+                    method = argumentsArray[0];
                 if (Countdown.prototype.hasOwnProperty(method)) {
                     instance[method].apply(instance, argumentsArray.slice(1));
                 } else if (String(method).match(/^[$A-Z_][0-9A-Z_$]*$/i) === null) {
@@ -186,4 +199,3 @@
         });
     };
 });
-		

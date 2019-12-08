@@ -1,17 +1,18 @@
 div .text-white::first-letter {
-  color: #e86528;
+    color: #e86528;
 }
+
 #hacktitiude-title {
-  font-size: 100px;
+    font-size: 100px;
 }
 
 #hacktitiude-description {
-  margin-top: 3% !important;
+    margin-top: 3% !important;
 }
 
 @media (max-width: 991px) {
     .column-margin {
-      margin: 5% 0;
+        margin: 5% 0;
     }
 }
 
@@ -22,14 +23,17 @@ div .text-white::first-letter {
     border: none;
 }
 
-.dark-header.navbar li.active > a { color: #fff; opacity: 1;}
+.dark-header.navbar li.active>a {
+    color: #fff;
+    opacity: 1;
+}
 
 .navbar li {
     margin: 13px 15px;
 }
 
 .main-background-color {
-background-color: #1f2532;
+    background-color: #1f2532;
 }
 
 .full-black {
@@ -51,7 +55,7 @@ background-color: #1f2532;
 }
 
 div img.custom-img {
-    width:100%
+    width: 100%
 }
 
 .text-align-c {
@@ -79,7 +83,7 @@ div img.custom-img {
 }
 
 div img.hacktitude-img {
-    width:50%
+    width: 50%
 }
 
 .organizing-tag {
@@ -98,18 +102,18 @@ h2.timeline-title::first-letter {
 h2.timeline-title {
     text-align: center;
 }
-  
-  .row-f {
+
+.row-f {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding-top: 2em ;
+    padding-top: 2em;
     padding-bottom: 2em;
-  }
+}
 
-  .card {
-    background: rgba(255, 255, 255, 0.1) ;
+.card {
+    background: rgba(255, 255, 255, 0.1);
     width: 90%;
     height: 300px;
     padding: 20px;
@@ -119,22 +123,23 @@ h2.timeline-title {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-  }
-  .center-box-1{
+}
+
+.center-box-1 {
     height: 100px;
     width: 100px;
     margin: 20%;
     background: rgba(0, 0, 0, 0) url('../images/Hacktitiude/pics/dilantha.jpg') no-repeat scroll 50% 50% / cover padding-box border-box;
 }
 
-.center-box-2{
+.center-box-2 {
     height: 100px;
     width: 100px;
     margin: 20%;
     background: rgba(0, 0, 0, 0) url('../images/Hacktitiude/pics/shalitha.jpg') no-repeat scroll 50% 50% / cover padding-box border-box;
 }
 
-.center-box-3{
+.center-box-3 {
     height: 100px;
     width: 100px;
     margin: 20%;
@@ -156,15 +161,13 @@ h2.timeline-title {
         top: 0px;
         text-align: center;
     }
-
     .card {
         width: 95%;
         margin: 10px 10px 10px 10px;
     }
-
     .center-box {
         top: 87px;
-    left: 56px;
+        left: 56px;
     }
 }
 
@@ -177,15 +180,13 @@ h2.timeline-title {
         top: 0px;
         text-align: center;
     }
-
     .card {
         width: 95%;
         margin: 10px 10px 10px 10px;
     }
-
     .center-box {
         top: 87px;
-    left: 56px;
+        left: 56px;
     }
 }
 
@@ -198,15 +199,13 @@ h2.timeline-title {
         top: 0px;
         text-align: center;
     }
-
     .card {
         width: 95%;
         margin: 10px 10px 10px 10px;
     }
-
     .center-box {
         top: 87px;
-    left: 56px;
+        left: 56px;
     }
 }
 
@@ -219,14 +218,12 @@ h2.timeline-title {
         top: 0px;
         text-align: center;
     }
-
     .card {
         width: 100%;
         margin: 10px 10px 10px 10px;
     }
-
     .center-box {
         top: 87px;
-    left: 56px;
+        left: 56px;
     }
 }
