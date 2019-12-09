@@ -162,9 +162,9 @@
             };
             if (this.totalSecsLeft === 0) {
                 this.stop();
-                document.getElementById("reg").disabled = false;
-                document.getElementById("reg-2").disabled = false;
-                document.getElementById("reg-2").innerHTML="Register Now!";
+                document.getElementById("reg").disabled = true;
+                document.getElementById("reg-2").disabled = true;
+                document.getElementById("reg-2").innerHTML="Registrations Closed";
                 this.dispatchEvent("finish");
             } else {
                 this.dispatchEvent("update");

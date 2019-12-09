@@ -532,9 +532,9 @@ jQuery(function($) {
 });
 
 function animatecounters() {
-    document.getElementById("reg").disabled = true;
-    document.getElementById("reg-2").disabled = true;
-    document.getElementById("reg-2").innerHTML="Await Registrations!"
+    document.getElementById("reg").disabled = false;
+    document.getElementById("reg-2").disabled = false;
+    document.getElementById("reg-2").innerHTML="Register Now!"
     $('.timer').each(count);
 
     function count(options) {
